@@ -1,0 +1,13 @@
+{
+    "name": "Text Sentiment Analyzer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/app",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/app,type=bind"
+    ],
+    "forwardPorts": [8501],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root"
+}
