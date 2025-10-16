@@ -1,35 +1,51 @@
-# 🧠 Minimal Keyword Extractor (Pure Python + NLTK)
+# 🧠 Text Sentiment Analyzer using Transformers
 
-Build a system that ingests raw text (documents, articles, tweets) using **TF-IDF**, returns ranked keywords/phrases per document, and exposes the result via a CLI, small web UI, or API. No heavy ML libraries required.
+Analyze the emotional tone of text — Positive, Neutral, or Negative — using the **CardiffNLP Twitter RoBERTa** model and **Streamlit** web interface.
 
-## Features
-- TF-IDF based keyword extraction
-- Optional FastAPI API
-- Optional Streamlit UI
-- Minimal dependencies
+This project is containerized with **Dev Containers (VS Code / Cursor)** for an isolated and reproducible environment.
 
-## Installation
+## 🚀 Features
+
+- Real-time sentiment analysis using Hugging Face Transformers  
+- Supports multiple paragraphs or comments at once  
+- Displays sentiment distribution (Positive / Negative / Neutral)  
+- Clean Streamlit web interface  
+- Ready-to-use Dev Container for easy setup  
+- CPU-compatible (no GPU required)
+
+## Steps Installation
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/fossmentor-official/minimal-keyword-extractor
-cd minimal-keyword-extractor
-pip3 install -r requirements.txt
+git clone https://github.com/fossmentor-official/text-sentiment-analyzer.git
+cd text-sentiment-analyzer
 ```
 
-## Run
-**CLI**
+2. Open in VS Code / Cursor and click:
+“Reopen in Container”
+
+3. Wait for Docker to build the image. Once ready, the environment will open inside the container.
+
+4. Run the Streamlit app:
 ```bash
-python extractor.py
+streamlit run app.py
 ```
 
-**Streamlit UI**
-```bash
-streamlit run streamlit_app.py
-```
+5. Open the URL shown in the terminal usually http://localhost:8501
 
-**API**
-```bash
-uvicorn main_api:app --reload
-```
+
+🧠 Usage
+1. Enter one or more paragraphs (or comments) in the text box.
+2. Click "Analyze".
+3. The app displays:
+  * Individual paragraph sentiments
+  * Total count of Positive, Neutral, and Negative comments
+
+🌍 Future Improvements
+  * Fetch real-time comments from Facebook/Twitter APIs
+  * Add visual sentiment charts
+  * Support multiple languages
+  * Save results to CSV or database
 
 <!-- Actual text -->
 ## Find me on
@@ -51,7 +67,11 @@ uvicorn main_api:app --reload
  I will be happy to assist 
 # 
 ## want something improved or added?
-  > Fork the repo @ [GitHub](https://github.com/fossmentor-official/minimal-keyword-extractor)
+  > Fork the repo @ [GitHub](https://github.com/fossmentor-official/text-sentiment-analyzer)
 # 
 ## Regards,
  > [Fossmentor](https://fossmentor.com)
+
+
+🪪 License
+MIT License © 2025 Fossmentor Official
